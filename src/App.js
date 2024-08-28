@@ -148,7 +148,7 @@ function App() {
 
         <div className="image">
           {!isWaiting && image ? (
-            <img src={image} alt="AI generated image" />
+            <img src={image} alt="AI generated" />
           ) : isWaiting ? (
             <div className="image__placeholder">
               <Spinner animation="border" />
