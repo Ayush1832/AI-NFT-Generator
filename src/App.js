@@ -72,7 +72,7 @@ function App() {
   const createImage = async () => {
     setMessage("Generating Image...");
 
-    const URL = `https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2`;
+    const URL = `https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0`;
 
     const response = await axios({
       url: URL,
@@ -103,10 +103,7 @@ function App() {
     setMessage("Uploading Image...");
 
     // Create instance of NFT.Storage
-    // const nftstorage = new NFTStorage({ token: process.env.REACT_APP_NFT_STORAGE_API_KEY });
-    const nftstorage = new NFTStorage({ token: '67411388.13ac294995fb4c83914e930cacddfbce' });
-
-
+    const nftstorage = new NFTStorage({ token: process.env.REACT_APP_NFT_STORAGE_API_KEY });
 
     // Upload the image and metadata
     const { ipnft } = await nftstorage.store({
